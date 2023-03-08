@@ -96,7 +96,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 $client = new Google_Client();
 $client->setApplicationName('API code samples');
-$client->setDeveloperKey('AIzaSyCcwuZTOSpcjciXWnjqP8lbv8fe0FiQ5qI');
+$client->setDeveloperKey('<developer key here>'); #example : AIzaSyCcwuZTOSpcjciXWnjqP8lbv8fe0FiQ12j
 $service = new Google_Service_Books($client);
 $optParams = array('q'=>$searchbox );//'filter' => 'free-ebooks');
 $results = $service->volumes->listVolumes('intitle', $optParams);
