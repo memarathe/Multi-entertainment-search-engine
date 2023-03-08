@@ -7,7 +7,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 $client = new Google_Client();
 $client->setApplicationName('API code samples');
-$client->setDeveloperKey('AIzaSyCcwuZTOSpcjciXWnjqP8lbv8fe0FiQ5qI');
+$client->setDeveloperKey('<your - developer - key>');#example: AIzaSyCcwuZTOSpcfciXWnjqP8lbq9We0FiQ5qI
 $service = new Google_Service_Books($client);
 $optParams = array('filter' => 'free-ebooks');
 $results = $service->volumes->listVolumes('swami vivekanand', $optParams);?>
