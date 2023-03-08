@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+header {
+  background-color: black;
+  padding: 30px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 30%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div.blocktext{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  opacity: 0.7;
+  margin-left: auto;
+    margin-right: auto;
+    width: 30em;
+  /*width:50%;*/
+  
+}
+body{
+  background-image:url("background.jpg");
+  background-size: cover;
+ background-repeat: no-repeat;
+}
+footer{
+
+  padding: 30px;
+  text-align: right;
+  font-size: 20px;
+  color: white;
+  height: 100px;
+}
+
+
+
+</style>
+<body>
+<!-- <h3>Using CSS to style an HTML Form</h3> -->
+<header>
+  <h4>Entertainment is here</h4>
+</header>
+ <script>
+      function disable()
+      {
+        alert("hello");
+        
+        
+      }
+    </script>
+<div class="blocktext">
+  <form action="logic.php" method="POST">
+    <label for="country"><h3>Country</h3></label>
+    <input type="text" id="country" name="country" placeholder="Ex: INDIA">
+
+    
+
+    <label for="entertainment"><h3>Type of Entertainment</h3></label>
+    <select id="entertainment" name="entertainment" onchange="disable()">
+      <!-- <option value="music"><h4>Songs</h4></option> -->
+      <option value="videos"><h4>Videos</h4></option>
+      <option value="books"><h4>E-books</h4></option>
+      <option value="news"><h4>News Feed</h4></option>
+    </select>
+    <label for="search"><h3>Search</h3></label>
+    <input type="text" id="search" name="search" placeholder="Ex: cricket">
+    
+    <input type="submit" value="Submit">
+
+
+  </form>
+  <script type="text/javascript">
+  function disable()
+  {
+    
+    if(document.getElementById('entertainment').value==="news")
+    {
+      // document.getElementById('search').disabled=true;
+      document.getElementById('country').disabled=true;
+    }
+    
+    else if(document.getElementById('entertainment').value==="books")
+    {
+      document.getElementById('country').disabled=true;
+    }
+    else
+    {
+      document.getElementById('search').disabled=false;
+      document.getElementById('country').disabled=false;
+    }
+  }
+</script>
+</div>
+
+<footer>
+  
+  <br><h3>Contact info:+91 9742522557</h3>
+  <h3> for more information please refer the below link</h3>
+  <h3><a href="https://www.google.com/search?q=recommendation+engine+algorithms&rlz=1C1CHBF_enUS850US850&oq=recomendation+engine&aqs=chrome.3.69i57j0l7.9571j0j8&sourceid=chrome&ie=UTF-8">Recomendation engine</a></h3>
+</footer>
+
+
+</body>
+</html>
